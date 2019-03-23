@@ -33,7 +33,7 @@ class Map extends Component {
       <Card className={this.props.classes.card}>
         <CardHeader title="Google Map Visualization" />
         <CardContent>
-          <div className="map-container">
+          <div className={this.props.classes.mapContainer}>
             <GoogleMapReact
               bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY} }
               center={[this.props.lat, this.props.lng]}

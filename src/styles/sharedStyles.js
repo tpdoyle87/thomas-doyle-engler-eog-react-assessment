@@ -19,5 +19,9 @@ export const styles = {
   },
   goRight: {
     textAlign: "right"
+  },
+  mapContainer: {
+    height: "50vh",
+    width: "100%"
   }
 };
