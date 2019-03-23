@@ -36,7 +36,6 @@ const App = props => (
       <Wrapper>
         <Header />
         <SimpleTabs />
-        <button onClick={notify}>Notify!</button>
         <ToastContainer
           position="bottom-right"
         />
