@@ -29,28 +29,28 @@ class Dashboard extends Component {
             <ListItem>
               <ListItemText primary="Temperature: " />
               <ListItemText
-                className="list-item-right"
+                className={this.props.classes.goRight}
                 primary={`${this.props.metric}`}
               />
             </ListItem>
             <ListItem>
               <ListItemText primary="Latitude:" />
               <ListItemText
-                className="list-item-right"
+                className={this.props.classes.goRight}
                 primary={`${this.props.lat}`}
               />
             </ListItem>
             <ListItem>
               <ListItemText primary="Longitude:" />
               <ListItemText
-                className="list-item-right"
+                className={this.props.classes.goRight}
                 primary={`${this.props.lng}`}
               />
             </ListItem>
             <ListItem>
               <ListItemText primary="Last Received:" />
               <ListItemText
-                className="list-item-right"
+                className={this.props.classes.goRight}
                 primary={
                   `${parseInt((moment() - this.props.timestamp) /  1000)} second(s) ago`
                   }

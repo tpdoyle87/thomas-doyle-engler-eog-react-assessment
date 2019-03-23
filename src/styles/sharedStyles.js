@@ -16,5 +16,8 @@ export const CardHeader = withStyles(cardStyles)(CardHeaderRaw);
 export const styles = {
   card: {
     margin: "5% 25%"
+  },
+  goRight: {
+    textAlign: "right"
   }
 };
