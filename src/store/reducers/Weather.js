@@ -6,8 +6,8 @@ const initialState = {
   name: "",
   temperature: "",
   weather_state_name: "",
-  latitude: null,
-  longitude: null,
+  latitude: 32,
+  longitude: -92,
   data: {}
 };
 
@@ -28,7 +28,6 @@ const weatherDataRecevied = (state, action) => {
   const { weather_state_name, the_temp } = weather;
   const { latt_long, title: name } = data;
   const [latitude, longitude] = latt_long.split(",");
-
   return {
     ...state,
     loading: false,
@@ -45,7 +44,7 @@ const weatherDataRecevied = (state, action) => {
 const handlers = {
   [actions.FETCH_WEATHER]: startLoading,
   [actions.WEATHER_ID_RECEIVED]: weatherIDReceived,
-  [actions.WEATHER_DATA_RECEIVED]: weatherDataRecevied
+  [actions.WEATHER_DATA_RECEIVED]: weatherDataRecevied,
 };
 
 export default (state = initialState, action) => {

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions";
+
 import LinearProgress from "@material-ui/core/LinearProgress";
 import ChipRaw from "@material-ui/core/Chip";
 import { withStyles } from "@material-ui/core/styles";
@@ -17,6 +18,7 @@ const Chip = withStyles(cardStyles)(ChipRaw);
 
 class Weather extends Component {
   componentDidMount() {
+    console.log(this.props.weather)
     this.props.onLoad();
   }
   render() {
@@ -35,18 +37,18 @@ class Weather extends Component {
   }
 }
 
-const mapState = (state, ownProps) => {
+const mapState = (state) => {
   const {
     loading,
     name,
     weather_state_name,
-    temperatureinFahrenheit
+    temperatureinFahrenheit,
   } = state.weather;
   return {
     loading,
     name,
     weather_state_name,
-    temperatureinFahrenheit
+    temperatureinFahrenheit,
   };
 };
 
@@ -54,8 +56,8 @@ const mapDispatch = dispatch => ({
   onLoad: () =>
     dispatch({
       type: actions.FETCH_WEATHER,
-      longitude: -95.3698,
-      latitude: 29.7604
+      longitude: -94.23515201958546,
+      latitude: 30.949418334243543
     })
 });
 
