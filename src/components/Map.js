@@ -2,22 +2,13 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions";
 
+import { CardHeader, styles } from '../styles/sharedStyles'
 import GoogleMapReact from 'google-map-react';
 import Card from "@material-ui/core/Card";
-import CardHeaderRaw from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
 import LinearProgress from "@material-ui/core/LinearProgress"
 import { withStyles } from "@material-ui/core/styles";
 
-const cardStyles = theme => ({
-  root: {
-    background: theme.palette.primary.main
-  },
-  title: {
-    color: "white"
-  }
-});
-const CardHeader = withStyles(cardStyles)(CardHeaderRaw);
 
 const classes = "pin bounce"
 
@@ -30,13 +21,8 @@ const AnyReactComponent = () => {
     );
   }
 
-const styles = {
-  card: {
-    margin: "5% 25%"
-  }
-};
-
 class Map extends Component {
+
   ComponentWillMount() {
     this.props.onLoad()
   }
