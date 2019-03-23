@@ -49,7 +49,7 @@ class Map extends Component {
         <CardContent>
           <div className="map-container">
             <GoogleMapReact
-              bootstrapURLKeys={{ key: "AIzaSyBV63auZXO6S-TIB2hq9XMmfGqkrKJjkJ8"} }
+              bootstrapURLKeys={{ key: process.env.REACT_APP_GOOGLE_API_KEY} }
               center={[this.props.lat, this.props.lng]}
               defaultZoom={4}
               yesIWantToUseGoogleMapApiInternals={true}
