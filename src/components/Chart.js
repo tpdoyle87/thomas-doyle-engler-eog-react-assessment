@@ -13,10 +13,11 @@ import { withStyles } from "@material-ui/core/styles";
 class Chart extends Component {
   render() {
     const chartData = []
-    for (let i = 0; i < this.props.data.data.length; i++) {
+    const { data }   = this.props.data
+    for (let i = 0; i < data.length; i++) {
       chartData.push({
-        timestamp: moment(this.props.data.data[i].timestamp).format("MMM DD YYYY, HH:mm:ss"),
-        metric: this.props.data.data[i].metric
+        timestamp: moment(data[i].timestamp).format("MMM DD YYYY, HH:mm:ss"),
+        metric: data[i].metric
       });
     }
     return(
