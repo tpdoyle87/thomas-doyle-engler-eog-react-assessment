@@ -26,7 +26,7 @@ class Chart extends Component {
         <CardContent>
           <LineChart width={450} height={250} data={chartData} iconSize={6} >
             <XAxis dataKey="timestamp" />
-            <YAxis domain={[235, 325]}/>
+            <YAxis domain={[236, 322]}/>
             <Tooltip />
             <Legend verticalAlign="top" height={36} />
             <Line type="monotone" dataKey="metric" stroke="#333" />

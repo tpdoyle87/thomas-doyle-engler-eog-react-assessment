@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions";
+import moment from 'moment'
 
 import { CardHeader, styles } from '../styles/sharedStyles'
-import moment from 'moment'
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import List from "@material-ui/core/List";
@@ -53,7 +53,7 @@ class Dashboard extends Component {
                 className={this.props.classes.goRight}
                 primary={
                   `${parseInt((moment() - this.props.timestamp) /  1000)} second(s) ago`
-                  }
+                }
               />
             </ListItem>
           </List>

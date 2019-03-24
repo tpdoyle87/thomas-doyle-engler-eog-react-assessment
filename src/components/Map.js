@@ -12,7 +12,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 const classes = "pin bounce"
 
-const AnyReactComponent = () => {
+const Marker = () => {
   return (
     <div>
       <div className={classes}></div>
@@ -21,8 +21,8 @@ const AnyReactComponent = () => {
     );
   }
 
-class Map extends Component {
 
+class Map extends Component {
   ComponentWillMount() {
     this.props.onLoad()
   }
@@ -41,7 +41,7 @@ class Map extends Component {
               yesIWantToUseGoogleMapApiInternals={true}
 
             >
-              <AnyReactComponent
+              <Marker
                 lat={this.props.lat}
                 lng={this.props.lng}
               />
