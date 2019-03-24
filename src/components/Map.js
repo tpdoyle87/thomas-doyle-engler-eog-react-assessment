@@ -13,8 +13,7 @@ import { withStyles } from "@material-ui/core/styles";
 const Marker = () => {
   return (
     <div>
-      <div className="pin bounce"></div>
-      <div className="pulse"></div>
+      <div className="pin"></div>
     </div>
     );
   }
@@ -38,8 +37,8 @@ class Map extends Component {
               yesIWantToUseGoogleMapApiInternals={true}
 
             >
+
               <Marker
-                className={this.props.classes.pin}
                 lat={this.props.lat}
                 lng={this.props.lng}
               />
