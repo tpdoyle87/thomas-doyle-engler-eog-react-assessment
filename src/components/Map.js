@@ -12,9 +12,7 @@ import { withStyles } from "@material-ui/core/styles";
 
 const Marker = () => {
   return (
-    <div>
       <div className="pin"></div>
-    </div>
     );
   }
 
