@@ -1,7 +1,7 @@
 import React from "react";
 import createStore from "./store";
 import { Provider } from "react-redux";
-import { ToastContainer, toast } from "react-toastify";
+import { ToastContainer } from "react-toastify";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import "react-toastify/dist/ReactToastify.css";
@@ -26,8 +26,6 @@ const theme = createMuiTheme({
     }
   }
 });
-
-const notify = () => toast.error("Wow so EAsy !");
 
 const App = props => (
   <MuiThemeProvider theme={theme}>

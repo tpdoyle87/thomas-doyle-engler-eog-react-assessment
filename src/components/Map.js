@@ -10,17 +10,14 @@ import LinearProgress from "@material-ui/core/LinearProgress"
 import { withStyles } from "@material-ui/core/styles";
 
 
-const classes = "pin bounce"
-
 const Marker = () => {
   return (
     <div>
-      <div className={classes}></div>
+      <div className="pin bounce"></div>
       <div className="pulse"></div>
     </div>
     );
   }
-
 
 class Map extends Component {
   ComponentWillMount() {
@@ -42,6 +39,7 @@ class Map extends Component {
 
             >
               <Marker
+                className={this.props.classes.pin}
                 lat={this.props.lat}
                 lng={this.props.lng}
               />

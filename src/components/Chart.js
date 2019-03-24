@@ -40,7 +40,7 @@ class Chart extends Component {
 
 const mapStore = (state) => {
   const {
-    data: data
+    data
   } = state.drone;
   return {
     data
