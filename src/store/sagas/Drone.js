@@ -4,7 +4,7 @@ import API from "../api";
 import * as actions from "../actions";
 
 function* delayApiCall() {
-  yield call(delay, 3000)
+  yield call(delay, 3000);
 }
 
 function* watchFetchDroneLocation() {

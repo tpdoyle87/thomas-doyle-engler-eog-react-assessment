@@ -18,7 +18,7 @@ const startLoading = (state, action) => {
 const LocationDataRecieved = (state, action) => {
   const { data } = action.data;
   if (data === "Server communication Error") return state;
-  const recentData = data[data.length - 1]
+  const recentData = data[data.length - 1];
   const timestamp = recentData.timestamp;
   const lat = recentData.latitude;
   const lng = recentData.longitude;
@@ -32,7 +32,7 @@ const LocationDataRecieved = (state, action) => {
     timestamp,
     metric,
     data: action.data
-  }
+  };
 }
 
 const handlers = {
