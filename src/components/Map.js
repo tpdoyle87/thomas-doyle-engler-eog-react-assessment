@@ -22,7 +22,7 @@ class Map extends Component {
   }
 
   render() {
-    if (this.props.metric == null) return <LinearProgress />
+    if (this.props.loading) return <LinearProgress />
     return (
       <Card className={this.props.classes.card}>
         <CardHeader title="Google Map Visualization" />
@@ -50,11 +50,13 @@ class Map extends Component {
 
 const mapState = (state) => {
   const {
+    loading,
     metric,
     lat,
     lng
   } = state.drone;
   return {
+    loading,
     metric,
     lat,
     lng,

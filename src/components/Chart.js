@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import LinearProgress from "@material-ui/core/LinearProgress"
 import { CardHeader, styles} from '../styles/sharedStyles'
 import { LineChart, CartesianGrid, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import moment from 'moment'
@@ -20,6 +21,7 @@ class Chart extends Component {
         metric: data[i].metric
       });
     }
+    if (this.props.loading) return <LinearProgress />
     return(
       <Card className={this.props.classes.card}>
         <CardHeader title="Chart Visualization" />
@@ -40,9 +42,11 @@ class Chart extends Component {
 
 const mapStore = (state) => {
   const {
+    loading,
     data
   } = state.drone;
   return {
+    loading,
     data
   }
 }

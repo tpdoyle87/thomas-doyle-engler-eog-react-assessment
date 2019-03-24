@@ -19,7 +19,7 @@ class Dashboard extends Component {
   }
 
   render() {
-    if (this.props.metric === null) return <LinearProgress />;
+    if (this.props.loading) return <LinearProgress />;
     return (
       <Card className={this.props.classes.card}>
         <CardHeader title="Dashboard" />
@@ -63,12 +63,14 @@ class Dashboard extends Component {
 
 const mapState = (state) => {
   const {
+    loading,
     timestamp,
     lat,
     lng,
     metric
   } = state.drone
   return {
+    loading,
     timestamp,
     lat,
     lng,
