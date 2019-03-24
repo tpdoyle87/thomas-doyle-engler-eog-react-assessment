@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 
 import { CardHeader, styles} from '../styles/sharedStyles'
-import { LineChart, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import { LineChart, CartesianGrid, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 import moment from 'moment'
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -25,6 +25,7 @@ class Chart extends Component {
         <CardHeader title="Chart Visualization" />
         <CardContent>
           <LineChart width={450} height={250} data={chartData} iconSize={6} >
+            <CartesianGrid strokeDasharray="5 5" />
             <XAxis dataKey="timestamp" />
             <YAxis domain={[236, 322]}/>
             <Tooltip />
