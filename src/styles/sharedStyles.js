@@ -4,7 +4,7 @@ import CardHeaderRaw from "@material-ui/core/CardHeader";
 
 export const cardStyles = theme => ({
   root: {
-    background: theme.palette.primary.main
+    background: theme.palette.primary.main,
   },
   title: {
     color: "white"

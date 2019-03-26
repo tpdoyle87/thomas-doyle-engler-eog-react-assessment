@@ -13,19 +13,19 @@ import { withStyles } from "@material-ui/core/styles";
 
 class Chart extends Component {
   render() {
-    const chartData = []
-    const { data }   = this.props.data
+    if (this.props.loading) return <LinearProgress />
+    const chartData = [];
+    const { data }   = this.props.data;
     for (let i = 0; i < data.length; i++) {
       chartData.push({
         timestamp: moment(data[i].timestamp).format("MMM DD YYYY, HH:mm:ss"),
         metric: data[i].metric
       });
     }
-    if (this.props.loading) return <LinearProgress />
     return(
       <Card className={this.props.classes.card}>
         <CardHeader title="Chart Visualization" />
-        <CardContent>
+        <CardContent >
           <LineChart width={450} height={250} data={chartData} iconSize={6} >
             <CartesianGrid strokeDasharray="5 5" />
             <XAxis dataKey="timestamp" />
