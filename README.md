@@ -1,5 +1,8 @@
 ## Create React App Visualization
 
+## See it live 
+https://tde-eog-assesment.herokuapp.com/
+
 So, This test was pretty enjoyable.
  Things I liked (
   Got to test out redux-saga (which was pretty awesome),
