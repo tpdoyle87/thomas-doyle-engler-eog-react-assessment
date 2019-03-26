@@ -23,5 +23,9 @@ export const styles = {
   mapContainer: {
     height: "50vh",
     width: "100%"
+  },
+  definedSize: {
+    width: "40rem",
+    height: "20rem"
   }
 };

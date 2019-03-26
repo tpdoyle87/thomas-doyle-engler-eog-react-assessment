@@ -3,7 +3,16 @@ import { connect } from "react-redux";
 
 import LinearProgress from "@material-ui/core/LinearProgress"
 import { CardHeader, styles} from '../styles/sharedStyles'
-import { LineChart, CartesianGrid, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
+import {
+  LineChart,
+  CartesianGrid,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
+} from 'recharts';
 import moment from 'moment'
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -25,15 +34,17 @@ class Chart extends Component {
     return(
       <Card className={this.props.classes.card}>
         <CardHeader title="Chart Visualization" />
-        <CardContent >
-          <LineChart width={450} height={250} data={chartData} iconSize={6} >
-            <CartesianGrid strokeDasharray="5 5" />
-            <XAxis dataKey="timestamp" />
-            <YAxis domain={[236, 322]}/>
-            <Tooltip />
-            <Legend verticalAlign="top" height={36} />
-            <Line type="monotone" dataKey="metric" stroke="#333" />
-          </LineChart>
+        <CardContent  className={this.props.classes.definedSize}>
+          <ResponsiveContainer height='100%' width='100%'>
+            <LineChart data={chartData} iconSize={6} >
+              <CartesianGrid strokeDasharray="5 5" />
+              <XAxis dataKey="timestamp" />
+              <YAxis domain={[236, 322]}/>
+              <Tooltip />
+              <Legend verticalAlign="top" height={36} />
+              <Line type="monotone" dataKey="metric" stroke="#333" />
+            </LineChart>
+          </ResponsiveContainer>
         </CardContent>
       </Card>
     );
