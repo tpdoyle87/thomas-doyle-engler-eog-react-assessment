@@ -4,7 +4,7 @@ import CardHeaderRaw from "@material-ui/core/CardHeader";
 
 export const cardStyles = theme => ({
   root: {
-    background: theme.palette.primary.main
+    background: theme.palette.primary.main,
   },
   title: {
     color: "white"
@@ -23,5 +23,9 @@ export const styles = {
   mapContainer: {
     height: "50vh",
     width: "100%"
+  },
+  definedSize: {
+    width: "40rem",
+    height: "20rem"
   }
 };

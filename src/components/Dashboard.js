@@ -12,6 +12,10 @@ import ListItemText from "@material-ui/core/ListItemText";
 import LinearProgress from "@material-ui/core/LinearProgress";
 import { withStyles } from "@material-ui/core/styles";
 
+<<<<<<< HEAD
+=======
+//
+>>>>>>> 5007b6c405cdc6f46f3ee055b456427c05ba5b5e
 class Dashboard extends Component {
 
   componentWillMount() {

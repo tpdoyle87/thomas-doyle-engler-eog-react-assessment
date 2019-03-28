@@ -24,6 +24,7 @@ TabContainer.propTypes = {
 
 const styles = theme => ({
   root: {
+    minHeight: "100vh",
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
   },
