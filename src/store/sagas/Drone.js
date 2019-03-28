@@ -1,5 +1,5 @@
 import { takeEvery, call, put, cancel, all } from "redux-saga/effects";
-import { delay } from "redux-saga"
+import { delay } from "redux-saga";
 import API from "../api";
 import * as actions from "../actions";
 
@@ -13,8 +13,7 @@ function* watchFetchDroneLocation() {
       API.findDroneLocation
     );
     if (error) {
-      console.log({ error });
-      yield put({ type: actions.API_ERROR, code: error.code, msg: 'From your drone location API' });
+      yield put({ type: actions.API_ERROR, code: error.code, msg: "From your drone location API" });
       yield cancel();
       return;
     }

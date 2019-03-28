@@ -1,10 +1,11 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import LinearProgress from "@material-ui/core/LinearProgress"
-import { CardHeader, styles} from '../styles/sharedStyles'
-import { LineChart, CartesianGrid, Line, XAxis, YAxis, Tooltip, Legend } from 'recharts';
-import moment from 'moment'
+import LinearProgress from "@material-ui/core/LinearProgress";
+import { CardHeader, styles} from "../styles/sharedStyles";
+import { LineChart, CartesianGrid, Line, XAxis, YAxis, Tooltip, Legend } from "recharts";
+import moment from "moment";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import { withStyles } from "@material-ui/core/styles";
@@ -13,15 +14,15 @@ import { withStyles } from "@material-ui/core/styles";
 
 class Chart extends Component {
   render() {
-    const chartData = []
-    const { data }   = this.props.data
+    const chartData = [];
+    const { data }   = this.props.data;
     for (let i = 0; i < data.length; i++) {
       chartData.push({
         timestamp: moment(data[i].timestamp).format("MMM DD YYYY, HH:mm:ss"),
         metric: data[i].metric
       });
     }
-    if (this.props.loading) return <LinearProgress />
+    if (this.props.loading) return <LinearProgress />;
     return(
       <Card className={this.props.classes.card}>
         <CardHeader title="Chart Visualization" />
@@ -48,8 +49,8 @@ const mapStore = (state) => {
   return {
     loading,
     data
-  }
-}
+  };
+};
 
 
 export default connect(mapStore)(withStyles(styles)(Chart));

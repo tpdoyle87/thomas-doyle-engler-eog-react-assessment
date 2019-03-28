@@ -18,7 +18,6 @@ const Chip = withStyles(cardStyles)(ChipRaw);
 
 class Weather extends Component {
   componentDidMount() {
-    console.log(this.props.weather)
     this.props.onLoad();
   }
   render() {

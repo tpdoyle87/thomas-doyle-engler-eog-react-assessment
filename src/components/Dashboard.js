@@ -1,17 +1,17 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import * as actions from "../store/actions";
 
-import { CardHeader, styles } from '../styles/sharedStyles'
+import { CardHeader, styles } from "../styles/sharedStyles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
-import LinearProgress from "@material-ui/core/LinearProgress"
+import LinearProgress from "@material-ui/core/LinearProgress";
 import { withStyles } from "@material-ui/core/styles";
 
-//
 class Dashboard extends Component {
 
   componentWillMount() {
@@ -59,7 +59,7 @@ class Dashboard extends Component {
       </Card>
     );
   }
-};
+}
 
 const mapState = (state) => {
   const {
@@ -68,7 +68,7 @@ const mapState = (state) => {
     lat,
     lng,
     metric
-  } = state.drone
+  } = state.drone;
   return {
     loading,
     timestamp,

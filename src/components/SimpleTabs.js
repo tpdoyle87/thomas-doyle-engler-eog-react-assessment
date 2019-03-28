@@ -1,7 +1,7 @@
 import React from 'react';
-import Dashboard from './Dashboard'
-import Map from './Map'
-import Chart from './Chart'
+import Dashboard from './Dashboard';
+import Map from './Map';
+import Chart from './Chart';
 
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
